@@ -9,7 +9,7 @@ int main() {
 
 
     cout << "덧셈식 입력 : ";
-    getline(cin, str);
+    getline(cin, str); // 공백 포함 저장
     len = str.length();
 
     while(true){
@@ -18,16 +18,16 @@ int main() {
         {
             if (start < len) // 마지막 + 방지
             {
-                sub = str.substr(start, plus - start);
-                sum += stoi(sub);
+                sub = str.substr(start, plus - start); // 마지막 숫자 저장
+                sum += stoi(sub); // 정수 변환 후 덧셈
                 cout << sub << endl;
             }
             cout << "숫자들의 합은 " << sum << endl;
             break;
         }
         else{ // + 일 때
-            sub = str.substr(start, plus - start);
-            sum += stoi(sub);
+            sub = str.substr(start, plus - start); // 각 숫자들 저장
+            sum += stoi(sub); // 정수 변환 후 덧셈
             cout << sub << endl;
         }
         start = plus + 1; // + 다음 인덱스
