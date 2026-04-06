@@ -59,7 +59,7 @@ int main(){
     a.show();
     b.show();
     c.show();
-    a = c++;
+    a = c++; // 후위 연산 (a = 바뀌기 전의 값)
     a.show();
     c.show();
 }
